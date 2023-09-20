@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Laravel</title>
+@section('title', 'C-137 Events')
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
-        </style>
-    </head>
-    <body>
+@section('content')
         <h1>Alguma coisa</h1>
+        <img src="/img/banner.jpg" alt="">
         @if(10>5)
             <p>A condição é true</p>
         @endif
+
         <p>{{$nome}}</p>
+
         @if($nome== "Bruno")
             <p>Seu nome é Bruno e tem {{$idade}} anos e trabalha como {{$profissao}}</p>
         @elseif($nome == "Rafael")
@@ -28,5 +18,16 @@
         @else
             <p>Seu nome não é Bruno</p>
         @endif
-    </body>
-</html>
+
+        @for($i = 0; $i <count($array); $i++)
+            <p>{{$array[$i]}}<p>
+            @if($i == 2)
+            <p>Voce ganhou</p>
+            @endif
+        @endfor
+
+        @foreach($arraynomes as $nome)
+        <p>{{$nome}}</p>
+        @endforeach
+        {{--Comentario do Blade--}}
+@endsection
