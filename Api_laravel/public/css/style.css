@@ -150,6 +150,16 @@ header{
     font-size: 15px;
 }
 
+/*event page*/
+#image-container,
+#info-container{
+    margin-top: 30px;
+}
+
+#image-container img{
+    border-radius: 10px;
+}
+
 /*footer*/
 
 footer{
