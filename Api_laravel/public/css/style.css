@@ -65,7 +65,8 @@ header{
 #search-container{
     background-image: url("../img/banner.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
+    background-attachment: fixed;
     height: 400px;
     padding: 50px;
     text-align: center;
@@ -160,6 +161,19 @@ header{
     border-radius: 10px;
 }
 
+#items-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li{
+    display: flex;
+    font-weight: bold;
+}
+
+.icones{
+    color: #F2A340;
+}
 /*footer*/
 
 footer{
