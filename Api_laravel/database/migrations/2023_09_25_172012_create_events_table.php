@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("title");
-            $table->text("description");
-            $table->string("city");
+            $table->string("title")->nullable();
+            $table->text("description")->nullable();
+            $table->string("city")->nullable();
             $table->boolean("private")->nullable();
         });
     }
