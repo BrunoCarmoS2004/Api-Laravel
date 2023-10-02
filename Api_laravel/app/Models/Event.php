@@ -11,3 +11,4 @@ class Event extends Model
     //Data foi adicionada depois
     protected $dates = ['date'];
 }
+    
