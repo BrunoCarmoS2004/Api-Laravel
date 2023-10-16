@@ -45,9 +45,14 @@ class EventController extends Controller
         $requestImage->move(public_path('img/events'), $imageName);
         $event->image = $imageName;
     }
+    //pega o ID do usuario logado e cadastra o evento em nome desse Usuario
+    $user = auth()->user();
+    $event->user_id = $user->id;
+
     $event->save();
     return redirect('/')->with('msg', 'Evento Criado com Sucesso!');
     }
+
     public function show($id){
         $event = Event::findOrFail($id);
         return view('events.show', ['event' =>$event]);
